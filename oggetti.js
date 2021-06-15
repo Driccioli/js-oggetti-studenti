@@ -6,16 +6,27 @@ var student={
     "età": 21
 }
 
-var studentList = [student, student, student, student];
-var names=["Davide", "Ottavio", "Alfredo", "Christian", "Edoardo", "Marco", "Eleonora", "Gloria"];
-var surnames=["Riccioli", "Fogliata", "Voza", "Guida", "Iervasi", "Grazian", "Rossi", "Ramoni"];
-for(i=0; i<studentList.length; i++){
-    var nameIndex = Math.floor(Math.random()*names.length);
-    var surnameIndex = Math.floor(Math.random()*surnames.length);
-    studentList[i].nome = names[nameIndex];
-    studentList[i].cognome = surnames[surnameIndex];
-    studentList[i].età = Math.floor(Math.random() * 101);
+for(var key in student){
+    console.log(key, student[key]);
 }
+
+var studentList = [
+    {
+        "nome": "Giorno",
+        "cognome": "Giovanna",
+        "età": 15
+    },
+    {
+        "nome": "Gastani",
+        "cognome": "Frinzi",
+        "età": 53
+    },
+    {
+        "nome": "Marco",
+        "cognome": "Ramoni",
+        "età": 22
+    }
+];
 
 for(var k=0; k<studentList.length; k++){
     for(var key in studentList[k]){
